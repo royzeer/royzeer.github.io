@@ -60,7 +60,7 @@ $('#yr').textContent = new Date().getFullYear();
 /* ---------- Palabra que se escribe sola ---------- */
 (function typer() {
   const el = $('#rotWord');
-  const words = ['restaurante', 'hostal', 'tienda', 'barbería', 'negocio'];
+  const words = ['negocio', 'tienda', 'barbería', 'hostal', 'consultorio', 'restaurante', 'marca'];
   if (reduced) return;
   let w = 0, i = words[0].length, del = true;
   function tick() {
@@ -175,7 +175,7 @@ const FEATS = {
   whatsapp: { label: { def: 'Pedir por WhatsApp' }, msg: { def: 'pedidos por WhatsApp' }, html: '', cls: 'wa' }
 };
 const ORDER = ['catalogo', 'fotos', 'reservas', 'mapa', 'admin', 'whatsapp'];
-let biz = 'restaurante';
+let biz = 'negocio';
 const pick = (o) => o[biz] || o.def;
 
 function buildPreview(animateKey) {
@@ -191,7 +191,8 @@ function buildPreview(animateKey) {
 
   const parts = list.map(k => pick(FEATS[k].msg));
   const txt = parts.length > 1 ? parts.slice(0, -1).join(', ') + ' y ' + parts.at(-1) : (parts[0] || '');
-  const msg = `Hola Roycer, tengo un ${biz} y quiero una página web` + (txt ? ` con ${txt}.` : '.') + ' ¿Me cuentas cómo sería?';
+  const art = biz === 'tienda' ? 'una' : 'un';
+  const msg = `Hola Roycer, tengo ${art} ${biz} y quiero una página web` + (txt ? ` con ${txt}.` : '.') + ' ¿Me cuentas cómo sería?';
   $('#waPreview').textContent = '"' + msg + '"';
   $('#waSend').href = 'https://wa.me/573154930657?text=' + encodeURIComponent(msg);
 }
