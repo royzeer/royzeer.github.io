@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roycer Cervantes — Desarrollo web</title>
+<meta name="description" content="Roycer Cervantes. Páginas web y aplicaciones a medida para negocios en Santa Marta.">
+<meta name="author" content="Roycer Cervantes">
+<meta property="og:title" content="Roycer Cervantes — Desarrollo web">
+<meta property="og:description" content="Páginas web y aplicaciones a medida para negocios en Santa Marta.">
+<meta property="og:image" content="img/shots/kuadri-card.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ecebe8">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=Silkscreen&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a href="#inicio" class="brand"><span class="px">RC</span> Roycer Cervantes</a>
+  <nav class="nav-links" id="navLinks">
+    <a href="#proyectos">Proyectos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#arma">Arma tu página</a>
+    <a href="#contacto" class="nav-cta">Hablemos</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><i></i><i></i></button>
+</header>
+
+<main>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="inicio">
+  <div class="hero-text">
+    <span class="status"><i></i>Disponible para proyectos · Santa Marta</span>
+    <h1>Páginas web para tu <span class="rot"><span id="rotWord">restaurante</span><b class="caret"></b></span></h1>
+    <p>Soy Roycer Cervantes. Diseño y programo páginas que se ven bien en el celular, cargan rápido y llevan a tus clientes directo a tu WhatsApp.</p>
+    <div class="hero-btns">
+      <a href="#proyectos" class="btn dark">Probar mis proyectos <span>&darr;</span></a>
+      <a href="#arma" class="btn line">Armar mi página</a>
+    </div>
+  </div>
+
+  <div class="hero-stack" id="stack" aria-label="Vista previa de proyectos">
+    <button class="card c1" data-go="orbezu" data-depth="18"><span class="bar"><i></i><i></i><i></i><em>orbezu.vercel.app</em></span><img src="img/shots/orbezu-card.jpg" alt="Orbezu"></button>
+    <button class="card c2" data-go="kuadri" data-depth="32"><span class="bar"><i></i><i></i><i></i><em>kuadri.vercel.app</em></span><img src="img/shots/kuadri-card.jpg" alt="Kuadri"></button>
+    <button class="card c3" data-go="edward" data-depth="50"><span class="bar"><i></i><i></i><i></i><em>edwardparrillata.com</em></span><img src="img/shots/edward-card.jpg" alt="Edward Parrillata"></button>
+    <span class="stack-hint">Toca una para abrirla</span>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-in">
+  <span>Restaurantes</span><b>✦</b><span>Hostales</span><b>✦</b><span>Tiendas</span><b>✦</b><span>Barberías</span><b>✦</b><span>Consultorios</span><b>✦</b><span>Emprendimientos</span><b>✦</b>
+  <span>Restaurantes</span><b>✦</b><span>Hostales</span><b>✦</b><span>Tiendas</span><b>✦</b><span>Barberías</span><b>✦</b><span>Consultorios</span><b>✦</b><span>Emprendimientos</span><b>✦</b>
+</div></div>
+
+<!-- ===================== PROYECTOS (visor interactivo) ===================== -->
+<section class="showcase" id="proyectos">
+  <div class="sc-head">
+    <div>
+      <span class="kicker">Proyectos</span>
+      <h2>No te lo cuento:<br>pruébalo aquí mismo</h2>
+    </div>
+    <p>Son capturas reales de las páginas en línea. Elige un proyecto, cambia entre computador y celular, y desliza dentro de la pantalla.</p>
+  </div>
+
+  <div class="sc-tabs" role="tablist" id="tabs">
+    <button role="tab" data-p="edward" class="on"><small>01</small>Edward Parrillata</button>
+    <button role="tab" data-p="kuadri"><small>02</small>Kuadri</button>
+    <button role="tab" data-p="orbezu"><small>03</small>Orbezu</button>
+  </div>
+
+  <div class="sc-body">
+    <div class="sc-view">
+      <div class="sc-tools">
+        <div class="seg" id="deviceSeg">
+          <button data-d="desk" class="on">Computador</button>
+          <button data-d="mob">Celular</button>
+        </div>
+        <button class="play" id="playBtn"><span class="ico"></span><span id="playTxt">Recorrer sola</span></button>
+      </div>
+
+      <div class="device desk" id="device">
+        <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url" id="scUrl">edwardparrillata.com</span></div>
+        <div class="viewport" id="viewport" tabindex="0" aria-label="Captura de la página, deslizable">
+          <img id="shot" src="img/shots/edward-desk.jpg" alt="Captura de Edward Parrillata">
+        </div>
+        <div class="progress"><i id="prog"></i></div>
+      </div>
+      <span class="scroll-hint">Desliza dentro de la pantalla</span>
+    </div>
+
+    <aside class="sc-info">
+      <span class="kicker o" id="scType">Negocio real</span>
+      <h3 id="scName">Edward Parrillata</h3>
+      <p id="scDesc"></p>
+      <ul class="tags" id="scTags"></ul>
+      <ul class="feats" id="scFeats"></ul>
+      <a class="btn light" id="scLink" href="#" target="_blank" rel="noopener">Abrir la página <span>&#8599;</span></a>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS ===================== -->
+<section class="services" id="servicios">
+  <span class="kicker">Servicios</span>
+  <h2>Una página pensada para cada tipo de negocio</h2>
+  <div class="svc-grid">
+    <article class="svc"><span class="n">01</span><h3>Restaurantes</h3><p>Carta con precios, fotos de los platos, reservas, horario y pedidos a domicilio por WhatsApp.</p><a href="#arma" data-pick="restaurante">Armar la mía &rarr;</a></article>
+    <article class="svc"><span class="n">02</span><h3>Hostales</h3><p>Habitaciones con fotos, servicios, cómo llegar y un botón claro para reservar.</p><a href="#arma" data-pick="hostal">Armar la mía &rarr;</a></article>
+    <article class="svc"><span class="n">03</span><h3>Tiendas</h3><p>Catálogo de productos con precios y pedido directo, sin depender solo de Instagram.</p><a href="#arma" data-pick="tienda">Armar la mía &rarr;</a></article>
+    <article class="svc"><span class="n">04</span><h3>Servicios y citas</h3><p>Barberías, consultorios y talleres que muestran lo que hacen y agendan clientes.</p><a href="#arma" data-pick="negocio de servicios">Armar la mía &rarr;</a></article>
+  </div>
+</section>
+
+<!-- ===================== ARMA TU PAGINA ===================== -->
+<section class="builder" id="arma">
+  <div class="b-left">
+    <span class="kicker">Arma tu página</span>
+    <h2>Elige lo que necesitas y mira cómo queda</h2>
+
+    <p class="b-label">1. ¿Qué negocio tienes?</p>
+    <div class="chips" id="bizChips">
+      <button data-v="restaurante" class="on">Restaurante</button>
+      <button data-v="hostal">Hostal</button>
+      <button data-v="tienda">Tienda</button>
+      <button data-v="negocio de servicios">Servicios</button>
+      <button data-v="negocio">Otro</button>
+    </div>
+
+    <p class="b-label">2. ¿Qué quieres que tenga?</p>
+    <div class="chips multi" id="featChips">
+      <button data-f="catalogo" class="on">Carta o catálogo</button>
+      <button data-f="fotos" class="on">Galería de fotos</button>
+      <button data-f="whatsapp" class="on">Pedidos por WhatsApp</button>
+      <button data-f="reservas">Reservas o citas</button>
+      <button data-f="mapa">Mapa y horario</button>
+      <button data-f="admin">Panel para editar yo mismo</button>
+    </div>
+
+    <div class="b-send">
+      <a class="btn dark" id="waSend" href="https://wa.me/573154930657" target="_blank" rel="noopener">Enviarme esta idea por WhatsApp <span>&rarr;</span></a>
+      <small id="waPreview"></small>
+    </div>
+  </div>
+
+  <div class="b-right" aria-hidden="true">
+    <div class="mini-phone">
+      <div class="mp-screen" id="mpScreen">
+        <div class="mp-top"><b id="mpName">Tu restaurante</b><span class="mp-menu"><i></i><i></i></span></div>
+        <div class="mp-hero"><span>Bienvenido</span></div>
+        <div class="mp-blocks" id="mpBlocks"></div>
+      </div>
+    </div>
+    <span class="b-count"><b id="bCount">3</b> secciones</span>
+  </div>
+</section>
+
+<!-- ===================== PROCESO ===================== -->
+<section class="process">
+  <span class="kicker">Proceso</span>
+  <h2>De la idea a tu dominio en cuatro pasos</h2>
+  <ol class="steps" id="steps">
+    <li class="on"><span class="px">01</span><h3>Conversamos</h3><p>Me cuentas tu negocio, qué vendes y qué quieres lograr con la página.</p></li>
+    <li><span class="px">02</span><h3>Diseño</h3><p>Te muestro cómo se va a ver, con tu marca, antes de programar nada.</p></li>
+    <li><span class="px">03</span><h3>Desarrollo</h3><p>La programo rápida, adaptada a celular y lista para recibir clientes.</p></li>
+    <li><span class="px">04</span><h3>Publicación</h3><p>La subo con tu dominio, la conecto a tu WhatsApp y te enseño a usarla.</p></li>
+  </ol>
+</section>
+
+<!-- ===================== SOBRE MI ===================== -->
+<section class="about">
+  <div class="about-card">
+    <span class="px big">RC</span>
+    <div>
+      <span class="kicker">Sobre mí</span>
+      <p class="lead">Tecnólogo en formación en Análisis y Desarrollo de Software (SENA) y técnico en Diseño e Integración de Multimedia. Programo y diseño: me importa que funcione y que se vea bien.</p>
+      <p>Trabajé en atención al cliente y caja en un restaurante, así que sé lo que un negocio necesita de su página: que la gente vea la carta, el horario y pida en segundos.</p>
+      <a href="https://github.com/royzeer" target="_blank" rel="noopener" class="tlink">Ver mi GitHub &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACTO ===================== -->
+<section class="contact" id="contacto">
+  <h2>¿Hacemos la página<br>de tu negocio?</h2>
+  <p>Escríbeme y conversamos sin compromiso.</p>
+  <div class="hero-btns center">
+    <a href="https://wa.me/573154930657" target="_blank" rel="noopener" class="btn orange">WhatsApp 315 493 0657 <span>&rarr;</span></a>
+    <button class="btn line-w" id="copyMail" data-mail="stebanc1703@gmail.com">stebanc1703@gmail.com <span class="copy-tag" id="copyTag">Copiar</span></button>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span><span class="px">RC</span> &copy; <span id="yr">2026</span> Roycer Cervantes · Santa Marta, Colombia</span>
+  <nav><a href="#proyectos">Proyectos</a><a href="#servicios">Servicios</a><a href="https://github.com/royzeer" target="_blank" rel="noopener">GitHub</a></nav>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
